@@ -1,16 +1,47 @@
 {% extends "_base.html" %}
- 
-{% block content %}
- 
-<div class="container">
-   
-   <!--Upload & Search-->
 
-   <!--Display Results on 4 column grid-->
- 
+{% block content %}
+
+
+<div class="row header">
+ <h1>SEARCH BY IMAGE</h1>
 </div>
- 
-<br>
- 
+<hr />
+
+
+<div class="row">
+ <!--Upload & Search-->
+ <div class="col-sm-3 search-panel">
+
+  <div class="form-group">
+     <div class="main-img-preview">
+        <img class="thumbnail img-preview" src="static/init-preview.png" title="Preview Image">
+    </div>
+    <div class="input-group">
+      <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="Choose File" disabled="disabled">
+      <div class="input-group-btn">
+        <div class="fileUpload btn btn-primary fake-shadow">
+        <span><i class="glyphicon glyphicon-upload"></i> Upload Image</span>
+          <input id="logo-id" name="logo" type="file" class="attachment_upload">
+        </div>
+      </div>
+    </div>
+    <p class="help-block"><span style="color: red;">*</span> Upload an Image.</p>
+  </div>
+  
+  <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>
+
+</div>
+
+<div class="col-sm-9 result-panel">
+
+   <!--<div class="result"></div>-->
+
+</div>
+
+</div>
+
+
+
 {% endblock %}
 
