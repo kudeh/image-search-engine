@@ -8,10 +8,9 @@ var data = [];
 $(function() {
 
   console.log( "ready!" );
-  
-  //when upload button is clicked.
+
   $('.fileUpload').click(function(){
-   
+
     var brand = document.getElementById('logo-id');
     brand.className = 'attachment_upload';
     brand.onchange = function() {
@@ -24,7 +23,8 @@ $(function() {
 
   });
 
-  
+  // sanity check
+
   // image click
   /*$(".search").unbind('click').bind('click', function (e) {
 
@@ -54,14 +54,14 @@ $(function() {
     });
  
   });*/
-  
+
 });
 
  // Source: http://stackoverflow.com/a/4459419/6396981
  function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
-    
+
     reader.onload = function(e) {
       $('.img-preview').attr('src', e.target.result);
     };

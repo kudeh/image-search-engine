@@ -13,7 +13,7 @@
  <!--Upload & Search-->
  <div class="col-sm-3 search-panel">
 
-  <div class="form-group">
+  <!--<div class="form-group">
      <div class="main-img-preview">
         <img class="thumbnail img-preview" src="static/init-preview.png" title="Preview Image">
     </div>
@@ -27,10 +27,19 @@
       </div>
     </div>
     <p class="help-block"><span style="color: red;">*</span> Upload an Image.</p>
-  </div>
+    <button type="button" class="btn btn-primary btn-sm save-btn">Save Image</button>
+  </div>-->
+  <form action = "http://localhost:5000/search" method = "POST" enctype = "multipart/form-data">
+    <div class="form-group">
+      <div class="main-img-preview">
+        <img class="thumbnail img-preview" src = {{ preview }} title="Preview Image">
+      </div>
+      <input type = "file" name = "file" class="choose-btn" />
+      <button type = "submit" class="btn btn-primary btn-lg search-btn"><span><i class="glyphicon glyphicon-search"></i>Search</span></button>
+    </div>
+  </form>
   
-  <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>
-
+ <!-- <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>-->
 </div>
 
 <div class="col-sm-9 result-panel">

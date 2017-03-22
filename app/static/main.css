@@ -46,6 +46,10 @@ h1 {
     border-radius: 20px;
 }
 
+.search-btn span i{
+    padding-right: 10px;
+}
+
 .result-panel {
     border-left: 2px solid silver;
     height: 100%;
