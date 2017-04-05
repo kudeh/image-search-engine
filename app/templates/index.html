@@ -20,31 +20,49 @@
     <div class="input-group">
       <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="Choose File" disabled="disabled">
       <div class="input-group-btn">
-        <div class="fileUpload btn btn-primary fake-shadow">
-        <span><i class="glyphicon glyphicon-upload"></i> Upload Image</span>
+        <div class="fileUpload btn btn-primary fake-shadow" id="searchButton">
+        <span><i class="glyphicon glyphicon-search"></i>Search Image</span>
           <input id="logo-id" name="logo" type="file" class="attachment_upload">
         </div>
       </div>
     </div>
     <p class="help-block"><span style="color: red;">*</span> Upload an Image.</p>
-    <button type="button" class="btn btn-primary btn-sm save-btn">Save Image</button>
   </div>-->
-  <form action = "http://localhost:5000/search" method = "POST" enctype = "multipart/form-data">
+  <form action = "/upload" method = "POST" enctype = "multipart/form-data">
     <div class="form-group">
       <div class="main-img-preview">
-        <img class="thumbnail img-preview" src = {{ preview }} title="Preview Image">
+        <img class="thumbnail img-preview" src = "static/init-preview.png" title="Preview Image">
       </div>
-      <input type = "file" name = "file" class="choose-btn" />
-      <button type = "submit" class="btn btn-primary btn-lg search-btn"><span><i class="glyphicon glyphicon-search"></i>Search</span></button>
+      <input type = "file" name = "file" class="choose-btn" id="upload-file" />
     </div>
   </form>
+  <button type = "submit" class="btn btn-primary btn-lg search-btn" id="searchButton"><span><i class="glyphicon glyphicon-search"></i>Search</span></button>
   
  <!-- <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>-->
 </div>
 
 <div class="col-sm-9 result-panel">
 
-   <!--<div class="result"></div>-->
+   <!--<div class="result">-->
+     <!--{% for item in resultSet %}
+        div><img src="static/images{{ resultSet[item].images }}" /></div>
+        <div>resultSet[item]</div>
+     {% endfor %}-->
+   <!--</div>-->
+
+   <h2>Results</h2>
+    <br>
+    <p id="searching">Searching...</p>
+    <table class="table" id="results-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="results">
+      </tbody>
+    </table>
 
 </div>
 

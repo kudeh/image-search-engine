@@ -1,4 +1,5 @@
 import os
+import cv2
 import numpy as np
  
 from flask import Flask, render_template, request, jsonify, redirect, url_for
@@ -28,23 +29,26 @@ def search():
  
     if request.method == "POST":
  
-        file = request.files['file']
+        '''file = request.files['file']
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        #RESULTS_ARRAY = []
- 
+        RESULTS_ARRAY = []
+        print(filename)'''
+        RESULTS_ARRAY = []
+
         # get url
-        #image_url = request.form.get('img')
+        image_url = request.form.get('img')
  
         try:
  
             # initialize the image descriptor
-            '''cd = ColorDescriptor((8, 12, 3))
+            cd = ColorDescriptor((8, 12, 3))
  
             # load the query image and describe it
             from skimage import io
             import cv2
-            query = io.imread("/home/kene/Documents/PyImageSearch/3D Histogram Descriptor Method With Web Interface/app/"+image_url)
+            #query = io.imread("/home/kene/Documents/PyImageSearch/3D Histogram Descriptor Method With Web Interface/app/"+image_url)
+            query = cv2.imread("/home/kene/Documents/Projects/Image-Search-Engine/app/static/queries/"+image_url);
             #query = io.imread(image_url)
             #query = (query * 255).astype("uint8")
             #(r, g, b) = cv2.split(query)
@@ -59,10 +63,11 @@ def search():
             # loop over the results, displaying the score and image name
             for (score, resultID) in results:
                 RESULTS_ARRAY.append(
-                    {"image": str(resultID), "score": str(score)})'''
+                    {"image": str(resultID), "score": str(score)})
             # return success
-            #return jsonify(results=(RESULTS_ARRAY[::-1][:5]))
-            return render_template('index.html', preview = "static/queries/"+filename)
+            return jsonify(results=(RESULTS_ARRAY[::-1][:5]), preview="queries/"+image_url)
+            #resultSet=jsonify(results=(RESULTS_ARRAY[::-1][:5]))
+            #return render_template('index.html', preview = "static/queries/"+filename, resultSet = jsonify(results=(RESULTS_ARRAY[::-1][:5])))
  
         except Exception, e:
             print(str(e))
@@ -70,11 +75,16 @@ def search():
             return jsonify({"sorry": "Sorry, no results! Please try again."}), 500
 
 # save uploaded pic to queries folder
-'''@app.route('/save', methods=['POST'])
-def save():
-
-    #if request.method == "POST":'''
-       
+@app.route('/upload', methods=['POST'])
+def upload():
+    if request.method == "POST":
+ 
+        file = request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        RESULTS_ARRAY = []
+        print(filename)
+    return jsonify({"upload": "uploaded."}), 200
 
 # run!
 if __name__ == '__main__':

@@ -72,3 +72,7 @@ h1 {
     margin: 8px;
     float: left;
 }
+
+#fakeUploadLogo {
+    width: 136px;
+}
