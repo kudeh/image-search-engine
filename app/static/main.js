@@ -71,8 +71,6 @@ $(document).ready(function(){
                     console.log(error.toString()); 
                 }
       });
-
-      console.log("cont");
       $.ajax({
           url: "/search",
           data: {img: file_name},
@@ -80,7 +78,7 @@ $(document).ready(function(){
           type: 'POST',
 
           success: function(result){
-            //console.log(data.preview);
+            console.log(result);
             var data = result.results;
         // show table
         //$("#results-table").show();

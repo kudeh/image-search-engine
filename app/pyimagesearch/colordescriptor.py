@@ -11,7 +11,6 @@ class ColorDescriptor:
 		# convert the image to the HSV color space and initialize
 		# the features used to quantify the image
 		image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-		print("got here")
 		features = []
 
 		# grab the dimensions and compute the center of the image

@@ -38,6 +38,7 @@ def search():
 
         # get url
         image_url = request.form.get('img')
+        print(image_url)
  
         try:
  
