@@ -38,32 +38,24 @@
   </form>
   <button type = "submit" class="btn btn-primary btn-lg search-btn" id="searchButton"><span><i class="glyphicon glyphicon-search"></i>Search</span></button>
   
- <!-- <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>-->
+  <div>
+     <div class="evaluation">
+        
+     </div>
+  </div>
+  
+  <!-- <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>-->
 </div>
 
-<div class="col-sm-9 result-panel">
+<div class="col-sm-9">
+  <h3 id="result-header"><strong>RESULTS</strong></h3>
+  <br>
+  <p id="searching"><strong>Searching...</strong></p>
+  <p id="error"><strong>An error occured!!</strong></p>
+  <div class="result-panel">
+      <p id="no-result"><strong>No Results Found!</strong></p>
 
-   <!--<div class="result">-->
-     <!--{% for item in resultSet %}
-        div><img src="static/images{{ resultSet[item].images }}" /></div>
-        <div>resultSet[item]</div>
-     {% endfor %}-->
-   <!--</div>-->
-
-   <h2>Results</h2>
-    <br>
-    <p id="searching">Searching...</p>
-    <table class="table" id="results-table">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody id="results">
-      </tbody>
-    </table>
-
+  </div>
 </div>
 
 </div>

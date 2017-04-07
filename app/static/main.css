@@ -1,7 +1,8 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);*/
 body {
     font-family: 'Verdana';
-    background-color: #FAFAD2;
+    background-color:  #85c1e9;
+    color: blue;
 }
 
 .header {
@@ -65,14 +66,53 @@ h1 {
     height: 250px;
 }
 
+.container {
+    background-color: white;
+    height: 100%;
+}
+
 .result {
     height: 200px;
     width: 22%;
-    background-color: blue;
-    margin: 8px;
+    /*background-color: blue;*/
+    margin: 12px;
     float: left;
+}
+
+.result img {
+    height: 100%;
+    width: 100%;
 }
 
 #fakeUploadLogo {
     width: 136px;
+}
+
+.caption {
+    text-align: center;
+    display: none;
+}
+
+.imageID {
+    text-align: center;
+    display: none;
+}
+
+#result-header {
+    text-align: center;
+}
+
+.evaluation {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+.blue-border {
+    border: 2px solid blue;
+}
+
+.red-border {
+    border: 2px solid red;
 }

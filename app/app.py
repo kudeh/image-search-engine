@@ -66,7 +66,7 @@ def search():
                 RESULTS_ARRAY.append(
                     {"image": str(resultID), "score": str(score)})
             # return success
-            return jsonify(results=(RESULTS_ARRAY[::-1][:5]), preview="queries/"+image_url)
+            return jsonify(results=(RESULTS_ARRAY[::-1][:101]), preview="queries/"+image_url)
             #resultSet=jsonify(results=(RESULTS_ARRAY[::-1][:5]))
             #return render_template('index.html', preview = "static/queries/"+filename, resultSet = jsonify(results=(RESULTS_ARRAY[::-1][:5])))
  
