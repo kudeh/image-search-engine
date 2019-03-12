@@ -49,7 +49,8 @@ def search():
             from skimage import io
             import cv2
             #query = io.imread("/home/kene/Documents/PyImageSearch/3D Histogram Descriptor Method With Web Interface/app/"+image_url)
-            query = cv2.imread("/home/kene/Documents/Projects/Image-Search-Engine/app/static/queries/"+image_url);
+            print(os.path.join(os.path.dirname(__file__), 'static/queries/image_url'))
+            query = cv2.imread(os.path.join(os.path.dirname(__file__), 'static/queries/'+image_url))
             #query = io.imread(image_url)
             #query = (query * 255).astype("uint8")
             #(r, g, b) = cv2.split(query)
