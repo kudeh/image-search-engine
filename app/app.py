@@ -70,7 +70,7 @@ def search():
             #resultSet=jsonify(results=(RESULTS_ARRAY[::-1][:5]))
             #return render_template('index.html', preview = "static/queries/"+filename, resultSet = jsonify(results=(RESULTS_ARRAY[::-1][:5])))
  
-        except Exception, e:
+        except Exception as e:
             print(str(e))
             # return error
             return jsonify({"sorry": "Sorry, no results! Please try again."}), 500
