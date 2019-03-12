@@ -5,8 +5,8 @@ import numpy as np
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from werkzeug.utils import secure_filename
  
-from pyimagesearch.colordescriptor import ColorDescriptor
-from pyimagesearch.searcher import Searcher
+from app.pyimagesearch.colordescriptor import ColorDescriptor
+from app.pyimagesearch.searcher import Searcher
 
 # create flask instance
 app = Flask(__name__)
