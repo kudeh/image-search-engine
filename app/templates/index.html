@@ -2,65 +2,36 @@
 
 {% block content %}
 
-
-<div class="row header">
- <h1>SEARCH BY IMAGE</h1>
+<div class="header">
+  <h1 class="title">Content-Based Image Retrieval System</h1>
 </div>
-<hr />
 
-
-<div class="row">
- <!--Upload & Search-->
- <div class="col-sm-3 search-panel">
-
-  <!--<div class="form-group">
-     <div class="main-img-preview">
-        <img class="thumbnail img-preview" src="static/init-preview.png" title="Preview Image">
+<div class="display">
+  <div class="left-pane">
+    <img src="static/init-preview.png" alt="preview image" class="img-preview">
+    <div id="image-name">Preview</div>
+    <div id="select" class="image-select">
+      Select & Search
     </div>
-    <div class="input-group">
-      <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="Choose File" disabled="disabled">
-      <div class="input-group-btn">
-        <div class="fileUpload btn btn-primary fake-shadow" id="searchButton">
-        <span><i class="glyphicon glyphicon-search"></i>Search Image</span>
-          <input id="logo-id" name="logo" type="file" class="attachment_upload">
+  </div>
+  <div class="right-pane">
+    <div id="results" class="search-results">
+
+    </div>
+  </div>
+</div>
+<!-- The Modal -->
+<div id="modal" class="modal-display">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images-list">
+
         </div>
-      </div>
     </div>
-    <p class="help-block"><span style="color: red;">*</span> Upload an Image.</p>
-  </div>-->
-  <form action = "/upload" method = "POST" enctype = "multipart/form-data">
-    <div class="form-group">
-      <div class="main-img-preview">
-        <img class="thumbnail img-preview" src = "static/init-preview.png" title="Preview Image">
-      </div>
-      <input type = "file" name = "file" class="choose-btn" id="upload-file" />
-    </div>
-  </form>
-  <button type = "submit" class="btn btn-primary btn-lg search-btn" id="searchButton"><span><i class="glyphicon glyphicon-search"></i>Search</span></button>
-  
-  <div>
-     <div class="evaluation">
-        
-     </div>
-  </div>
-  
-  <!-- <button type="button" class="btn btn-primary btn-lg search-btn">Search</button>-->
+      
 </div>
-
-<div class="col-sm-9">
-  <h3 id="result-header"><strong>RESULTS</strong></h3>
-  <br>
-  <p id="searching"><strong>Searching...</strong></p>
-  <p id="error"><strong>An error occured!!</strong></p>
-  <div class="result-panel">
-      <p id="no-result"><strong>No Results Found!</strong></p>
-
-  </div>
-</div>
-
-</div>
-
-
 
 {% endblock %}
 
