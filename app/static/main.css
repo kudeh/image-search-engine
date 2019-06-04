@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: #0D19A3;
 }
 
 .container {
@@ -11,6 +12,8 @@
 .header {
     text-align: center;
     font-weight: bold;
+    padding: 10px;
+    color: white;
 }
 
 .display {
@@ -26,6 +29,12 @@
     justify-content: flex-start;
 }
 
+.img-preview {
+    width: 300px;
+    margin: 5px;
+    border: 3px solid #080F5B;
+}
+
 #select {
     border: 1px solid red;
     padding: 2px;
@@ -35,6 +44,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15px;
+    padding: 10px;
+}
+
+.img-result {
+    margin: 5px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
 }
 
 /* The Modal (background) */

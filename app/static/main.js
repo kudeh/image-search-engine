@@ -71,7 +71,7 @@ var displayResults = function(data){
   for(var i = 0; i < data.length; i++){
     var image = data[i].image;
     var score = data[i].score;
-    var element = "<div class=img-result><img src="+imagePath+image+"/>\
+    var element = "<div class=img-result><img class=responsive src="+imagePath+image+"/>\
                    <div>"+score+"</div>\
                    <div>"+image+"</div>\
                    </div>"
