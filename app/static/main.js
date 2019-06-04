@@ -31,13 +31,13 @@ var getAllImages = function(){
 var displayModalImages = function(imgList){
 
    for(var i = 0; i < imgList.length; i++){
-      $(".modal-images-list").append("<img src="+imagePath+imgList[i]+" class=modal-image onclick=imageSelector(this) />");
+      $(".modal-images-list").append("<img src="+imagePath+imgList[i]+" class=modal-image onclick=imageSelectSearch(this) />");
    }
 
 }
 
 // handles click of modal image
-var imageSelector = function(_this) {
+var imageSelectSearch = function(_this) {
   var src = $(_this).attr("src");
 
   $("#modal").css("display", "none");
@@ -66,8 +66,16 @@ var imageSelector = function(_this) {
 //display results
 var displayResults = function(data){
 
+  $("#results").html("");
+
   for(var i = 0; i < data.length; i++){
-    console.log(data[i].image, data[i].score);
+    var image = data[i].image;
+    var score = data[i].score;
+    var element = "<div class=img-result><img src="+imagePath+image+"/>\
+                   <div>"+score+"</div>\
+                   <div>"+image+"</div>\
+                   </div>"
+    $("#results").append(element);
   }
 }
 
