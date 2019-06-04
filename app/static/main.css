@@ -19,13 +19,6 @@
     grid-column-gap: 20px;
 }
 
-@media (max-width: 500px){
-    .display {
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-    }
-}
-
 .left-pane {
     display: flex;
     flex-direction: column;
@@ -36,6 +29,12 @@
 #select {
     border: 1px solid red;
     padding: 2px;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
 }
 
 /* The Modal (background) */
@@ -92,4 +91,16 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media (max-width: 500px){
+    .display {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+
+    #results {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
 }
