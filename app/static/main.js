@@ -72,9 +72,8 @@ var displayResults = function(data){
     var image = data[i].image;
     var score = data[i].score;
     var element = "<div class=img-result><img class=responsive src="+imagePath+image+"/>\
-                   <div>"+score+"</div>\
-                   <div>"+image+"</div>\
-                   </div>"
+                   <div class=img-info>"+"<span class=image-name>IMAGE: "+image.split('.')[0]+"</span>\
+                   <span class=img-score>SCORE: "+score+"</span></div></div>"
     $("#results").append(element);
   }
 }

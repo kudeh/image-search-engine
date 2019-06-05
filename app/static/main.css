@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
     background-color: #0D19A3;
 }
 
@@ -13,6 +19,10 @@
     text-align: center;
     font-weight: bold;
     padding: 10px;
+    color: white;
+}
+
+hr {
     color: white;
 }
 
@@ -31,24 +41,53 @@
 
 .img-preview {
     width: 300px;
-    margin: 5px;
+    margin: 10px;
     border: 3px solid #080F5B;
 }
 
+#preview-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
 #select {
-    border: 1px solid red;
-    padding: 2px;
+    padding: 10px;
+    background-color: #15DB95;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    -moz-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    margin: 10px;
+}
+
+#select:hover {
+    transform: scale(.9);
 }
 
 #results {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15px;
+    grid-row-gap: 10px;
     padding: 10px;
 }
 
 .img-result {
-    margin: 5px;
+    background-color: #080F5B;
+    color: white;
+    border: 2px solid #F4E4C1;
+}
+
+.img-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
 }
 
 .responsive {
@@ -88,8 +127,7 @@
 
   .modal-image {
       margin-bottom: 10px;
-      max-width: 100px;
-      max-height: 100px;
+      width: 30%;
       cursor: pointer;
   }
 
