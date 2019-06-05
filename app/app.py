@@ -47,7 +47,6 @@ def search():
 
         # get url
         image_url = request.form.get('img')
-        print(image_url)
  
         try:
  
@@ -57,14 +56,8 @@ def search():
             # load the query image and describe it
             from skimage import io
             import cv2
-            #query = io.imread("/home/kene/Documents/PyImageSearch/3D Histogram Descriptor Method With Web Interface/app/"+image_url)
-            #print(os.path.join(os.path.dirname(__file__), 'static/queries/image_url'))
+
             query = cv2.imread(os.path.join(os.path.dirname(__file__), 'static/images/'+image_url))
-            #query = io.imread(image_url)
-            #query = (query * 255).astype("uint8")
-            #(r, g, b) = cv2.split(query)
-            #query = cv2.merge([b, g, r])
-            #query = cv2.cvtColor(query, cv2.COLOR_BGR2RGB)
             features = cd.describe(query)
  
             # perform the search
@@ -77,8 +70,6 @@ def search():
                     {"image": str(resultID), "score": str(score)})
             # return success
             return jsonify(results=(RESULTS_ARRAY[:101]), preview="images/"+image_url)
-            #resultSet=jsonify(results=(RESULTS_ARRAY[::-1][:5]))
-            #return render_template('index.html', preview = "static/queries/"+filename, resultSet = jsonify(results=(RESULTS_ARRAY[::-1][:5])))
  
         except Exception as e:
             print(str(e))
