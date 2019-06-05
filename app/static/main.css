@@ -28,6 +28,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-column-gap: 20px;
+    margin-top: 10px;
 }
 
 .left-pane {
@@ -35,8 +36,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
     color: #F4E4C1;
+    border-bottom: 3px solid #080F5B;
+    margin-left: 2px;
 }
 
 .img-preview {
@@ -46,9 +48,10 @@ body {
 }
 
 #preview-name {
-    color: black;
+    color: #080F5B;
     font-weight: bold;
     font-size: 1.25em;
+    text-align: center;
 }
 
 #select {
@@ -60,6 +63,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
     margin: 10px;
+    text-align: center;
 }
 
 #select:hover {
