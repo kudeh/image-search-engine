@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #0D19A3;
+    background-color: white;
 }
 
 .container {
@@ -19,12 +19,10 @@ body {
     text-align: center;
     font-weight: bold;
     padding: 10px;
-    color: white;
+    color: #0D19A3;
+    border-bottom: 5px solid #15DB95;
 }
 
-hr {
-    color: white;
-}
 
 .display {
     display: grid;
@@ -37,16 +35,18 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    height: 100vh;
+    color: #F4E4C1;
 }
 
 .img-preview {
-    width: 300px;
+    width: 95%;
     margin: 10px;
-    border: 3px solid #080F5B;
+    border: 4px solid #15DB95;
 }
 
 #preview-name {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 1.25em;
 }
@@ -59,21 +59,21 @@ hr {
     font-size: 1.5em;
     cursor: pointer;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
-    -moz-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
-    box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
     margin: 10px;
 }
 
 #select:hover {
-    transform: scale(.9);
+    transform: scale(.95);
+    -webkit-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    -moz-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
 }
 
 #results {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15px;
-    grid-row-gap: 10px;
+    grid-row-gap: 15px;
     padding: 10px;
 }
 
@@ -81,6 +81,9 @@ hr {
     background-color: #080F5B;
     color: white;
     border: 2px solid #F4E4C1;
+    -webkit-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    -moz-box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
+    box-shadow: 0px 0px 4px 3px rgba(8,15,91,1);
 }
 
 .img-info {
@@ -112,10 +115,10 @@ hr {
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background-color: #F4E4C1;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid black;
     width: 80%;
   }
 
@@ -132,7 +135,7 @@ hr {
   }
 
   .modal-image:hover {
-      border: 5px solid black;
+      border: 5px solid #0D19A3;
   }
   
   /* The Close Button */
