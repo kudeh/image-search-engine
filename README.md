@@ -1,5 +1,8 @@
 # Image-Search-Engine
 Content-Based Image Retrieval System Implemented Using Python, Flask And OpenCV.
+* Given a query image, this app returns other images from database in order of similar color content.
+* Uses a color histogram to define the color content of an image, uses chi-squared distance to determine
+similarities between two images
 
 ## Usage Guide
 1. To Use a different image dataset (optional)
