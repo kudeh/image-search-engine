@@ -17,9 +17,13 @@ cd = ColorDescriptor((8, 12, 3))
 
 #open the output index file for writing
 output = open(args["index"], "w")
+types = ('/*.jpg', '/*.png', '/*.gif') # the tuple of file types
+files_grabbed = []
+for files in types:
+    files_grabbed.extend(glob.glob(args["dataset"]+files))
 
 #use glob to grab the image paths and loop over them
-for imagePath in glob.glob(args["dataset"]+"/*.png"):
+for imagePath in files_grabbed:
     #extract the imageID from the image
     #path and load the image itself
     imageID = imagePath[imagePath.rfind("/")+1:]
