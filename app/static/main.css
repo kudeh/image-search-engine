@@ -82,6 +82,12 @@ body {
     padding: 10px;
 }
 
+#searching {
+    font-weight: bold;
+    font-size: 1.75em;
+    color: #080F5B;
+}
+
 .img-result {
     background-color: #080F5B;
     color: white;
@@ -100,8 +106,9 @@ body {
 }
 
 .responsive {
+    width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 250px;
 }
 
 /* The Modal (background) */

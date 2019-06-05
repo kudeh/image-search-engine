@@ -43,6 +43,8 @@ var imageSelectSearch = function(_this) {
 
   $("#modal").css("display", "none");
   $(".img-preview").attr("src", src);
+  $("#results").html("");
+  $("#results").append("<div id=searching>Searching For Results...</div>");
 
   var image = src.split('/')[2];
   var imageName = image.split('.')[0];

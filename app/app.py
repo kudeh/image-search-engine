@@ -29,7 +29,7 @@ def image_list():
 
         try:
 
-            imgList = [img for img in list(os.listdir(os.path.join(os.path.dirname(__file__), 'static/images/'))) if img.endswith('.png')]
+            imgList = [img for img in list(os.listdir(os.path.join(os.path.dirname(__file__), 'static/images/'))) if img[-4:] in ('.png', '.jpg', '.gif')]
 
             return jsonify(imgList=imgList)
         
