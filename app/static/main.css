@@ -64,6 +64,7 @@ body {
     border-radius: 10px;
     margin: 10px;
     text-align: center;
+    transition: .3s;
 }
 
 #select:hover {
@@ -120,11 +121,11 @@ body {
   
   /* Modal Content */
   .modal-content {
-    background-color: #F4E4C1;
+    background-color: white;
     margin: auto;
     padding: 20px;
-    border: 1px solid black;
-    width: 80%;
+    border: 2px solid black;
+    width: 90%;
   }
 
   .modal-images-list {
@@ -149,6 +150,7 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transform: translate(12px, -13px)
   }
   
   .close:hover,

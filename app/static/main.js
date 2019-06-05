@@ -32,6 +32,7 @@ var displayModalImages = function(imgList){
 
    for(var i = 0; i < imgList.length; i++){
       $(".modal-images-list").append("<img src="+imagePath+imgList[i]+" class=modal-image onclick=imageSelectSearch(this) />");
+
    }
 
 }
