@@ -8,18 +8,18 @@ how similar two image histograms are.
 1. To use a different image dataset (optional)
     * Populate image DB in `app/static/images`
     * Then in Terminal (you can use a virtualenv): 
-```
-pip install -r requirements.txt
-cd app
-python index.py --dataset static/images --index index.csv
+```bash
+>> pip install -r requirements.txt
+>> cd app
+>> python index.py --dataset static/images --index index.csv
 ```
 
 2. Run locally using Docker
     * Install [Docker](https://docs.docker.com/install/#supported-platforms)
     * Then in Terminal:
-```
-docker build --tag=imagesearch .
-docker run -p 80:8000 imagesearch
+```bash
+>> docker build --tag=imagesearch .
+>> docker run -p 80:8000 imagesearch
 ```
 * You should be able to access app at `localhost:80` in browser
 
