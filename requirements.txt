@@ -16,7 +16,7 @@ numpy==1.12.0
 olefile==0.44
 opencv-contrib-python==3.3.0.9
 packaging==16.8
-Pillow==5.4.1
+Pillow==6.2.0
 pyparsing==2.1.10
 python-dateutil==2.6.0
 pytz==2016.10
