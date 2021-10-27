@@ -2,7 +2,7 @@ appdirs==1.4.0
 certifi==2018.8.24
 click==6.7
 cycler==0.10.0
-dask==0.14.0
+dask==2021.10.0
 decorator==4.0.11
 Flask==1.0.2
 gunicorn==19.7.0
