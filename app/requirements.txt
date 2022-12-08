@@ -1,5 +1,5 @@
 appdirs==1.4.0
-certifi==2018.8.24
+certifi==2022.12.7
 click==6.7
 cycler==0.10.0
 dask==0.14.0
